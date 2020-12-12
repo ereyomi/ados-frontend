@@ -7,10 +7,16 @@
 @import "./components/sizing";
 @import "./components/buttons";
 @import "./components/cards";
+@import "./components/overlay";
+@import "./components/modal";
 
 
 
 body {
     background: $app-tetiary !important;
     font-family: $raleway;
+}
+
+.app-container {
+    position: relative;
 }
