@@ -1,1 +1,27 @@
-<p>card works!</p>
+<ng-container>
+
+    <div class="app-cards">
+        <!--  -->
+        <div class="app-card" *ngFor="let product of products">
+            <div class="app-card-image">
+                    <img [src]="product.image" alt="">
+            </div>
+            <div class="app-card-details">
+                <div class="app-card-name">
+                    {{product.name}}
+                </div>
+                <div class="app-card-price">
+                    <span class="app-card-currency-symbol">
+                        {{ product.currencySymbol }}
+                    </span>
+                    <span>
+                        {{ product.price }} 
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+    
+    </div>
+
+</ng-container>

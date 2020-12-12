@@ -1,0 +1,16 @@
+@import "./../assets/fonts/fonts";
+@import "./components/input";
+@import "./components/typography";
+@import "./components/colors";
+@import "./components/border";
+@import "./components/images";
+@import "./components/sizing";
+@import "./components/buttons";
+@import "./components/cards";
+
+
+
+body {
+    background: $app-tetiary !important;
+    font-family: $raleway;
+}

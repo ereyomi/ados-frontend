@@ -1,0 +1,89 @@
+@import "../variables";
+@import "../mixins";
+
+$btn-font-family: $font-family-base;
+$btn-primary-color: $white;
+$def-box-shadow: rgba(0, 0, 0, 0.15);
+$btn-padding-y-zero: 0;
+$btn-padding-x-zero: 0;
+$btn-min-width: rem(50);
+@mixin button-style(
+  $background,
+  $border,
+  $color,
+  $active-background,
+  $active-border,
+  $active-color,
+  $hover-bg,
+  $hover-border,
+  $hover-color,
+  $hover-shadow,
+  $disabled-bg,
+  $disabled-border,
+  $disabled-color
+) {
+  color: $color;
+  background: $background;
+  border: $border;
+  box-shadow: none !important;
+  &:focus,
+  &.focus {
+    outline: 0 !important;
+    box-shadow: 0 rem(2) rem(8) 0 $hover-shadow;
+    background: $hover-bg !important;
+    border: $hover-border !important;
+    color: $hover-color;
+  }
+  &:hover,
+  &.hover {
+    background: $hover-bg !important;
+    border: $hover-border !important;
+    color: $hover-color;
+    box-shadow: 0 rem(2) rem(8) 0 $hover-shadow;
+    @if $background == 'none' and $border == 'none' {
+      text-decoration: underline;
+    }
+  }
+  &:disabled,
+  &.disabled {
+    background: $disabled-bg !important;
+    border: $disabled-border !important;
+    color: $disabled-color !important;
+    opacity: 1;
+    text-decoration: $rc-none;
+    pointer-events: none;
+  }
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $active-color;
+    background: $active-background;
+    border: $active-border;
+  }
+}
+
+@mixin button-size(
+  $padding-y,
+  $padding-x,
+  $font-size,
+  $line-height,
+  $border-radius
+) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+.btn {
+  font-family: $raleway;
+  font-weight: normal;
+  min-width: $btn-min-width;
+  @include button-size(
+    $btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $btn-line-height,
+    $btn-border-radius
+  );
+}
