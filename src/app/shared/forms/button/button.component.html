@@ -1,0 +1,12 @@
+<ng-container>
+
+    <button [class]="btnClass" [type]="type || 'button'" [disabled]="isDisabled">
+        <ng-container [ngTemplateOutlet]="btncontent"></ng-container>
+    </button>
+
+</ng-container>
+
+<ng-template #btncontent>
+    <ng-content></ng-content>
+</ng-template>
+

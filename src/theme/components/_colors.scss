@@ -1,2 +1,9 @@
 @import "../mixins";
 @import "../variables";
+
+.app-primary-color {
+    color: red !important
+}
+.app-primary-bg {
+    background: $app-primary !important
+}

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './shared/card/card.component';
 import { StyleComponent } from './style/style.component';
 import { ProductModalComponent } from './product-modal/product-modal.component';
+import { FormsModule } from './shared/forms/forms.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductModalComponent } from './product-modal/product-modal.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

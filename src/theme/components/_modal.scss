@@ -44,7 +44,7 @@
     }
     .modal-desc {
         margin-top: rem(40);
-        font-size: rem(16);
+        margin-bottom: rem(10);
         padding: rem(10) rem(20);
         .modal-img {
             width: 100%;
@@ -56,6 +56,10 @@
                 object-fit: cover;
                 border-radius: rem(6);
             }
+        }
+        .modal-desc-text {
+            margin-top: rem(10);
+            font-size: rem(16);
         }
     }
 }

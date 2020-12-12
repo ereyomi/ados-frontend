@@ -50,7 +50,7 @@ $btn-min-width: rem(50);
     border: $disabled-border !important;
     color: $disabled-color !important;
     opacity: 1;
-    text-decoration: $rc-none;
+    text-decoration: none;
     pointer-events: none;
   }
   &:not(:disabled):not(.disabled):active,
@@ -85,5 +85,41 @@ $btn-min-width: rem(50);
     $btn-font-size,
     $btn-line-height,
     $btn-border-radius
+  );
+  cursor: pointer;
+}
+.app-primary-btn {
+  @include button-style(
+    $app-primary,
+    $app-primary-outline,
+    $white,
+    $app-primary,
+    $app-primary-outline,
+    $white,
+    $app-primary-b,
+    $app-primary-b-outline,
+    $app-primary,
+    none,
+    $app-primary,
+    $app-primary-outline,
+    $white,
+  );
+}
+
+.app-secondary-btn {
+  @include button-style(
+    $app-primary-b,
+    $app-primary-b-outline,
+    $app-primary,
+    $app-primary,
+    $app-primary-outline,
+    $white,
+    $app-primary-b,
+    $app-primary-b-outline,
+    $app-primary,
+    none,
+    $app-primary,
+    $app-primary-outline,
+    $white,
   );
 }

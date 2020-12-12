@@ -5,7 +5,7 @@ $questrial: "Questrial", Arial, sans-serif;
 
 // app main colors
 $app-primary: #1F2E35; /* main app color */
-$app-promary-b: #F3F2EF; /* background used for @ dashboad for view post */
+$app-primary-b: #F3F2EF; /* background used for @ dashboad for view post */
 $app-primary-c: #2F3735;
 $app-secondary: #40DF9F;
 $app-secondary-b: #D5F6EA;
@@ -19,8 +19,8 @@ $app-grey-ouline: 1px solid $app-grey;
 $app-primary-outline: 1px solid $app-primary;
 $app-dashboard-sidebars-outline: 0.5px solid #30444E;
 $app-post-card-outline: 1px solid #DFE0EB;
-
-
+$app-primary-outline: 1px solid $app-primary;
+$app-primary-b-outline: 1px solid $app-primary-b;
 // box shadows
 $app-box-shadow-a: 0px 5px 15px rgba(0, 0, 0, 0.15);
 
@@ -184,13 +184,13 @@ $headings-color: $grey2;
 $body-color: $base-text-color;
 
 // Buttons
-$btn-font-weight: 500;
-$btn-padding-y: rem(8);
+$btn-font-weight: 600;
+$btn-padding-y: rem(10);
 $btn-padding-x: rem(16);
 $btn-padding-sm-x: 57px;
-$btn-font-size: rem(12);
+$btn-font-size: rem(14);
 $btn-line-height: rem(16);
-$btn-border-radius: rem(3);
+$btn-border-radius: rem(5);
 // $btn-primary-bg: linear-gradient(135deg, $green 0%, $dark-green 100%);
 $btn-primary-bg: $app-primary;
 $btn-danger-bg: linear-gradient(135deg, $red 0%, $light-red 100%);
