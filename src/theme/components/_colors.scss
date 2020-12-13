@@ -2,8 +2,11 @@
 @import "../variables";
 
 .app-primary-color {
-    color: red !important
+    color: $app-primary !important
 }
 .app-primary-bg {
     background: $app-primary !important
+}
+.red-color {
+    color: red !important;
 }

@@ -48,15 +48,7 @@ export class CardComponent implements OnInit {
       currency: 'USD',
       currencySymbol: '$'
     }
-  ]
-  product = {
-    image: 'assets/images/product4.jpg',
-    name: 'iphone 6',
-    rating: 5,
-    price: '866',
-    currency: 'USD',
-    currencySymbol: '$'
-  }
+  ];
   constructor() { }
 
   ngOnInit(): void {

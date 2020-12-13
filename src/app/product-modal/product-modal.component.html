@@ -12,7 +12,11 @@
             <div class="modal-img">
                 <img src="assets/images/product1.jpg" alt="">
             </div>
-            <p class="modal-desc-text">
+           <div>
+               <h2 class="modal-name-b">
+                    {{ name }}
+                </h2>
+                <p class="modal-desc-text">
                 It is a long established fact that a reader will be 
                 distracted by the readable content of a page when looking at its layout. 
                 The point of using Lorem Ipsum is that it has a more-or-less normal 
@@ -22,18 +26,22 @@
                 for 'lorem ipsum' will uncover many web sites still in their infancy. 
                 Various versions have evolved over the years, sometimes by accident, 
                 sometimes on purpose (injected humour and the like).
-            </p>
-            <div class="modal-buttons">
-                <app-button class="mr-15">
-                    Add to bag
-                </app-button>
-                <app-button color="secondary">
-                    <span class="mr-8">
-                        <img src="assets/images/svg/heart-icon.svg" alt="" class="icon-18 app-primary-color"> 
-                    </span>
-                    <span>Contact Seller</span>
-                </app-button>
-            </div>
+                </p>
+                <div class="modal-buttons">
+                    <div class="my-3">
+                        <app-inputs type="quantity"></app-inputs>
+                    </div>
+                    <app-button class="mr-15">
+                        Add to bag
+                    </app-button>
+                    <app-button color="secondary">
+                        <span class="mr-8">
+                            <img src="assets/images/svg/heart-icon.svg" alt="" class="icon-18"> 
+                        </span>
+                        <span class="app-primary-color">Contact Seller</span>
+                    </app-button>
+                </div>
+           </div>
         </div>
     </div>
 </div>

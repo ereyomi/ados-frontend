@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './shared/card/card.component';
 import { StyleComponent } from './style/style.component';
 import { ProductModalComponent } from './product-modal/product-modal.component';
-import { FormsModule } from './shared/forms/forms.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppFormsModule } from './shared/forms/appforms.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { FormsModule } from './shared/forms/forms.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    AppFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

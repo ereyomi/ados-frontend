@@ -1,3 +1,42 @@
 @import "../mixins";
 @import "../variables";
 
+.quantity {
+    display: inline-block;
+    overflow: hidden;
+    border: $app-post-card-outline;
+    padding: rem(10);
+    border-radius: rem(10);
+    input {
+        width: 40px;
+        border:none;
+        border-left: $app-post-card-outline;
+        border-right: $app-post-card-outline;
+        outline: none;
+        margin: 0 rem(10);
+        text-align: center;
+        caret-color: transparent;
+        
+    }
+    img {
+        width: rem(20);
+        height: rem(20);
+        color: $app-grey;
+        svg {
+            fill: currentColor;
+        }
+    }
+}
+
+// fix for number type arrow
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

@@ -22,11 +22,9 @@ export class ButtonComponent implements OnInit {
   };
   constructor(private cdRef: ChangeDetectorRef) { }
 
-  ngOnInit(): void {
-    console.log(this.btnClass);
-  }
+  ngOnInit(): void {}
 
-  get btnClass() {
+  get btnClass(): string {
     if (typeof this.color === 'undefined') {
       return `${ this.btnClasses.primary } ${ this.class || '' }`;
     } else {
@@ -34,7 +32,7 @@ export class ButtonComponent implements OnInit {
     }
   }
 
-  get isDisabled() {
+  get isDisabled(): boolean {
     if (typeof this.disabled === 'undefined' || typeof this.disabled === null) {
       return false;
     } else {

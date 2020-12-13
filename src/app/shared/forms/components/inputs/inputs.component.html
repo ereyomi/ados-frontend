@@ -1,0 +1,13 @@
+<ng-container [formGroup]="componentFormGroup">
+
+    <div class="quantity" *ngIf="type === 'quantity'">
+
+        <img src="assets/images/svg/minus-icon.svg" alt="minus-icon" class="icon-20" (click)="decrement($event)">
+        
+        <input type="number" min="0" formControlName="input" value="0">
+
+        <img src="assets/images/svg/plus-icon.svg" alt="minus-icon" class="icon-20" (click)="increment($event)">
+
+    </div>
+    
+</ng-container>

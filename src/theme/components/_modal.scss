@@ -46,6 +46,9 @@
         margin-top: rem(40);
         margin-bottom: rem(10);
         padding: rem(10) rem(20);
+        .modal-name-b {
+            display: none;
+        }
         .modal-img {
             width: 100%;
             height: rem(250);
@@ -61,5 +64,37 @@
             margin-top: rem(10);
             font-size: rem(16);
         }
+    }
+}
+
+@media screen and (min-width: 768px) { 
+    .app-modal-overlay {
+        @extend .app-overlay;
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+    }
+    .app-modal-body {
+        width: 90%;
+        height: auto;
+        position: relative;
+        .app-modal-header {
+            display: none;
+        }
+        .modal-desc {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+            gap: rem(20);
+            .modal-name-b {
+                display: block;
+            }
+        }
+        
+    }
+}
+
+@media screen and (min-width: 900px) { 
+    .app-modal-body {
+        width: 80%;
     }
 }
