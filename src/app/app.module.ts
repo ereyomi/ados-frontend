@@ -8,6 +8,7 @@ import { StyleComponent } from './style/style.component';
 import { ProductModalComponent } from './product-modal/product-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppFormsModule } from './shared/forms/appforms.module';
+import { ProductsService } from './core/services/products.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { AppFormsModule } from './shared/forms/appforms.module';
     ReactiveFormsModule,
     AppFormsModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

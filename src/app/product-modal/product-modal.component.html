@@ -1,5 +1,5 @@
-<div class="app-modal-overlay">
-    <div class="app-modal-body">
+<div class="app-modal-overlay" (click)="closeModal()" [ngStyle]="{'display': isDisplay ? 'flex': 'none'}">
+    <div class="app-modal-body" (click)="stopModalPropagation($event)">
         <div class="app-modal-header">
             <div class="modal-name">
                 {{ name }}
@@ -28,8 +28,8 @@
                 sometimes on purpose (injected humour and the like).
                 </p>
                 <div class="modal-buttons">
-                    <div class="my-3">
-                        <app-inputs type="quantity"></app-inputs>
+                    <div class="my-3" [formGroup]="componentForm">
+                        <app-inputs type="quantity" formControlName="quantity"></app-inputs>
                     </div>
                     <app-button class="mr-15">
                         Add to bag

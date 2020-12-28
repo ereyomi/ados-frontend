@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from 'src/app/core/services/products.service';
 
 @Component({
   selector: 'app-card',
@@ -49,9 +50,11 @@ export class CardComponent implements OnInit {
       currencySymbol: '$'
     }
   ];
-  constructor() { }
+  constructor(private pS: ProductsService) { }
 
   ngOnInit(): void {
   }
-
+  cart(): void {
+    this.pS.openModal();
+  }
 }
