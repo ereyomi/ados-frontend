@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppFormsModule } from './shared/forms/appforms.module';
 import { ProductsService } from './core/services/products.service';
 import { HeaderComponent } from './shared/header/header.component';
+import { BagComponent } from './bag/bag.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeaderComponent } from './shared/header/header.component';
     CardComponent,
     StyleComponent,
     ProductModalComponent,
-    HeaderComponent
+    HeaderComponent,
+    BagComponent
   ],
   imports: [
     BrowserModule,

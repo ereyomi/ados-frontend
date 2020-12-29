@@ -6,7 +6,6 @@ import { ProductsService } from '../core/services/products.service';
 @Component({
   selector: 'app-product-modal',
   templateUrl: './product-modal.component.html',
-  styleUrls: ['./product-modal.component.scss']
 })
 export class ProductModalComponent implements OnInit, OnDestroy {
   name = 'mock name';
