@@ -9,13 +9,15 @@ import { ProductModalComponent } from './product-modal/product-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppFormsModule } from './shared/forms/appforms.module';
 import { ProductsService } from './core/services/products.service';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     StyleComponent,
-    ProductModalComponent
+    ProductModalComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
