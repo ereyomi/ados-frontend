@@ -69,7 +69,6 @@
 
 @media screen and (min-width: 768px) { 
     .app-modal-overlay {
-        @extend .app-overlay;
         @include flexbox;
         @include justify-content(center);
         @include align-items(center);
