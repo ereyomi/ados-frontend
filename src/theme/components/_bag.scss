@@ -22,10 +22,10 @@
         @include flex-direction(row);
         @include justify-content(space-between);
         @include align-items(center);
-        padding: rem(35);
+        padding: rem(25);
     }
     .bag-contents {
-        padding: 0 rem(35) 0 rem(35);
+        padding: 0 rem(25) 0 rem(25);
         @include flexbox;
         @include flex-direction(column);
         .bag-content {

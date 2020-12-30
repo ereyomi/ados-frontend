@@ -5,11 +5,11 @@ $font-size-base: 1rem;
 $font-family-base: $font-family-sans-serif;
 
 .text-weight-medium {
-  font-weight: 500 !important;
+  font-weight: 500;
 }
 
 .text-weight-normal {
-  font-weight: normal !important;
+  font-weight: normal;
 }
 
 .text-weight-bold {
@@ -17,7 +17,7 @@ $font-family-base: $font-family-sans-serif;
 }
 
 .ls-0 {
-  letter-spacing: 0 !important;
+  letter-spacing: 0;
 }
 
 h1,
@@ -27,18 +27,18 @@ h3 {
   letter-spacing: 0;
 }
 h1 {
-  font-size: rem(37) !important;
-  line-height: rem(40) !important;
+  font-size: rem(37);
+  line-height: rem(40);
 }
 
 h2 {
-  font-size: rem(30) !important;
-  line-height: rem(40) !important;
+  font-size: rem(30);
+  line-height: rem(40);
 }
 
 h3 {
-  font-size: rem(22) !important;
-  line-height: rem(32) !important;
+  font-size: rem(22);
+  line-height: rem(32);
 }
 
 .text2 {
@@ -155,39 +155,46 @@ h3 {
 }
 
 .s11-h16 {
-  font-size: rem(11) !important;
-  line-height: rem(16) !important;
+  font-size: rem(11);
+  line-height: rem(16);
 }
 
 .s12-h16 {
-  font-size: rem(12) !important;
-  line-height: rem(16) !important;
+  font-size: rem(12);
+  line-height: rem(16);
 }
 
 .s14-h16 {
-  font-size: rem(14) !important;
-  line-height: rem(16) !important;
+  font-size: rem(14);
+  line-height: rem(16);
 }
 
 .s15-h24 {
-  font-size: rem(15) !important;
-  line-height: rem(24) !important;
+  font-size: rem(15);
+  line-height: rem(24);
 }
 
 .s22-h32 {
-  font-size: rem(30) !important;
-  line-height: rem(40) !important;
+  font-size: rem(22);
+  line-height: rem(32);
 }
 
 .s30-h40 {
-  font-size: rem(30) !important;
-  line-height: rem(40) !important;
+  font-size: rem(30);
+  line-height: rem(40);
 }
 
 .s37-h40 {
-  font-size: rem(37) !important;
-  line-height: rem(40) !important;
+  font-size: rem(37);
+  line-height: rem(40);
 }
 .overflow-x {
-  overflow: hidden !important;
+  overflow: hidden;
 }
+
+@media screen and (min-width: 768px) {
+  .s15-md-h24 {
+    font-size: rem(15);
+    line-height: rem(24);
+  }
+ }
