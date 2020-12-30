@@ -29,6 +29,7 @@
             @include flexbox;
             @include flex-direction(row);
             @include align-items(center);
+            @include justify-content(space-between);
             .bag-product-img {
                 width: rem(60);
                 height: rem(60);
