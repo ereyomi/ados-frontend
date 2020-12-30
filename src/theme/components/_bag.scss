@@ -16,7 +16,6 @@
     @include justify-content(space-between);
     position: fixed;
     top: 0;
-    /* padding: rem(35) rem(35) 0 rem(35); */
     .bag-header,
     .bag-footer {
         @include flexbox;
@@ -59,7 +58,7 @@
 
 @media screen and (min-width: 768px) {
      .bag-view {
-         width: rem(400);
+         max-width: rem(550);
          right: 0;
      }
 }
