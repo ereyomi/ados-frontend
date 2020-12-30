@@ -60,3 +60,45 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+.input {
+    input {
+        font-family: 'Raleway';
+        color: $black;
+        font-size: rem(14) !important;
+        line-height: rem(16) !important;
+        padding: rem(8) rem(12);
+        border-radius: rem(2);
+        letter-spacing: 0;
+        width: 100%;
+        border: none;
+        background: none;
+        border: 1px solid $lighter-grey;
+        display: block;
+        transition: all 0.5s ease-in-out;
+        @include inputPlaceholder() {
+            color: $medium-grey;
+            opacity: 1;
+        }
+        &.input-error {
+            border: 1px solid $red;
+            @include inputPlaceholder() {
+                color: $red;
+            }
+        }
+        &:invalid {
+            border: 1px solid $red;
+            @include inputPlaceholder() {
+                color: $red;
+            }
+        }
+        &:hover {
+            border: $black;
+        }
+        &:focus {
+            color: $black !important;
+            border: 1px solid $red;
+        }
+        
+    }
+}

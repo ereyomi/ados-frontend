@@ -1,4 +1,3 @@
-import { TemplateRef } from '@angular/core';
 import { FormStatus } from '../form-status';
 import { LabelConfig } from '../label-config';
 

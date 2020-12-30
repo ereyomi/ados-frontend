@@ -14,5 +14,17 @@
         
 
     </div>
+
+    <div class="input" *ngIf="type === 'input'">
+       <input 
+            [type]="config?.type" 
+            #input 
+            formControlName="input" 
+            [placeholder]="config?.placeholder"
+            [autocomplete]="config?.autoComplete"
+            [autocapitalize]="config?.autoCapitalize !== '' ? config?.autoCapitalize : 'none'"
+            [class]="config?.inputClasses"
+        >
+    </div>
     
 </ng-container>
