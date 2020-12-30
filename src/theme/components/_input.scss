@@ -2,31 +2,50 @@
 @import "../variables";
 
 .quantity {
-    display: inline-block;
-    overflow: hidden;
+     -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    @include flexbox;
+    @include flex-direction(row);
+    @include align-items(center);
     border: $app-post-card-outline;
-    padding: rem(10);
-    border-radius: rem(10);
+    padding: 0 rem(10);
+    border-radius: rem(20);
     caret-color: transparent;
+    height: rem(40);
+    width: auto;
+    overflow: hidden;
     input {
-        width: 40px;
+        width: rem(40);
+        height: rem(40);
         border:none;
-        border-left: $app-post-card-outline;
-        border-right: $app-post-card-outline;
         outline: none;
-        margin: 0 rem(10);
+        margin: 0 rem(5);
         text-align: center;
         caret-color: transparent;
         
     }
-    img {
+    button {
+        border: none;
+        background: none;
         width: rem(20);
-        height: rem(20);
-        color: $app-grey;
-        svg {
-            fill: currentColor;
+        height: rem(40);
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        outline: none;
+        img {
+            width: rem(12);
+            height: rem(12);
+            svg {
+                object-fit: contain;
+                fill: currentColor;
+            }
         }
     }
+    
 }
 
 // fix for number type arrow

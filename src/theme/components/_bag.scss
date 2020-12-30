@@ -15,11 +15,32 @@
     @include flex-direction(column);
     @include justify-content(space-between);
     /* padding: rem(35) rem(35) 0 rem(35); */
-    .bag-header {
+    .bag-header,
+    .bag-footer {
         @include flexbox;
         @include flex-direction(row);
         @include justify-content(space-between);
         @include align-items(center);
         padding: rem(35);
+    }
+    .bag-contents {
+        padding: 0 rem(35) 0 rem(35);
+        .bag-content {
+            @include flexbox;
+            @include flex-direction(row);
+            @include align-items(center);
+            .bag-product-img {
+                width: rem(60);
+                height: rem(60);
+                border-radius: rem(6);
+                overflow: hidden;
+                margin-right: rem(10);
+                img {
+                    width: rem(60);
+                    height: rem(60);
+                    object-fit: contain;
+                }
+            }
+        }
     }
 }

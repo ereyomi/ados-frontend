@@ -1,18 +1,46 @@
 <ng-container>
     <div class="app-bag-overlay">
         <div class="bag-view">
-            <div class="bag-header">
-                <div class="bag-section">
-                    <img src="assets/images/svg/shopping-bag-icon.svg" alt="" class="icon-25">
-                    <span class="m-0 p-0 s15-h24 ml-6">5</span>
+            <div>
+                <div class="bag-header">
+                    <div class="bag-section">
+                        <img src="assets/images/svg/shopping-bag-icon.svg" alt="" class="icon-25">
+                        <span class="m-0 p-0 s15-h24 ml-6">5</span>
+                    </div>
+                    <div class="price-section">
+                        <p class="m-0"><b>NGN</b> 20,000</p>
+                        <p class="m-0"><b>Shipping:</b> NGN 1,000</p>
+                    </div>
                 </div>
-                <div class="price-section">
-                    <p class="m-0"><b>NGN</b> 20,000</p>
-                    <p class="m-0"><b>Shipping:</b> NGN 1,000</p>
+
+                <div class="bag-contents">
+
+                    <div class="bag-content">
+                        <div>
+                                <div class="bag-product-img">
+                                <img src="assets/images/product6.jpg" alt="">
+                            </div>
+                            <div>
+                                <p class="m-0">Product Name</p>
+                                <p class="m-0">NGN 5,000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ml-6" [formGroup]="componentForm">
+                            <app-inputs type="quantity" formControlName="quantity"></app-inputs>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
             <div class="bag-footer">
-                footer
+                <app-button color="secondary">
+                    Keep shopping
+                </app-button>
+                <app-button>
+                    Checkout
+                </app-button>
             </div>
         </div>
     </div>

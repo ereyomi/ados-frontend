@@ -5,7 +5,6 @@ import { InputConfig } from '../../models/input/input-config';
 @Component({
   selector: 'app-inputs',
   templateUrl: './inputs.component.html',
-  styleUrls: ['./inputs.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
