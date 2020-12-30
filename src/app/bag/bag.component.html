@@ -14,8 +14,8 @@
                 </div>
 
                 <div class="bag-contents">
-
                     <div class="bag-content">
+
                         <div>
                                 <div class="bag-product-img">
                                 <img src="assets/images/product6.jpg" alt="">
@@ -25,10 +25,43 @@
                                 <p class="m-0">NGN 5,000</p>
                             </div>
                         </div>
-                        
-                        <div class="ml-6" [formGroup]="componentForm">
-                            <app-inputs type="quantity" formControlName="quantity"></app-inputs>
+
+                       <div>
+                            <div class="ml-6 ml-md-0" [formGroup]="componentForm">
+                                <app-inputs type="quantity" formControlName="quantity"></app-inputs>
+                            </div>
+                            <div class="ml-6">
+                                <button class="btn-none">
+                                    <img src="assets/images/svg/delete-icon.svg" alt="" class="icon-20">
+                                </button>
+                            </div>
+                       </div>
+
+                    </div>
+
+                    <div class="bag-content">
+
+                        <div>
+                                <div class="bag-product-img">
+                                <img src="assets/images/product6.jpg" alt="">
+                            </div>
+                            <div>
+                                <p class="m-0">Product Name</p>
+                                <p class="m-0">NGN 5,000</p>
+                            </div>
                         </div>
+
+                       <div>
+                            <div class="ml-6 ml-md-0" [formGroup]="componentForm">
+                                <app-inputs type="quantity" formControlName="quantity"></app-inputs>
+                            </div>
+                            <div class="ml-6">
+                                <button class="btn-none">
+                                    <img src="assets/images/svg/delete-icon.svg" alt="" class="icon-20">
+                                </button>
+                            </div>
+                       </div>
+
                     </div>
 
                 </div>

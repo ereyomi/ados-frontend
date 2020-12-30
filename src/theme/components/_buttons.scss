@@ -123,3 +123,9 @@ $btn-min-width: rem(50);
     $white,
   );
 }
+
+.btn-none {
+  border: none;
+  background: none;
+  padding: none;
+}

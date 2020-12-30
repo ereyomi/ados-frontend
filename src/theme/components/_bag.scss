@@ -25,11 +25,20 @@
     }
     .bag-contents {
         padding: 0 rem(35) 0 rem(35);
+        @include flexbox;
+        @include flex-direction(column);
         .bag-content {
+            width: 100%;
             @include flexbox;
             @include flex-direction(row);
             @include align-items(center);
             @include justify-content(space-between);
+            margin-bottom: rem(10);
+            & > div {
+                @include flexbox;
+                @include flex-direction(row);
+                @include align-items(center);
+            }
             .bag-product-img {
                 width: rem(60);
                 height: rem(60);
