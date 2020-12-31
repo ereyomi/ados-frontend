@@ -31,7 +31,7 @@
                     <div class="my-3" [formGroup]="componentForm">
                         <app-inputs type="quantity" formControlName="quantity"></app-inputs>
                     </div>
-                    <app-button class="mr-15">
+                    <app-button class="mr-15" (click)="openBag()">
                         Add to bag
                     </app-button>
                     <app-button color="secondary">

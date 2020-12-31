@@ -5,15 +5,25 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-  isDisplay: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  isDisplayProductModal: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  isDisplayBagModal: BehaviorSubject<boolean> = new BehaviorSubject(false);
   constructor() { }
-  getDisplayStatus(): Observable<boolean> {
-    return this.isDisplay.asObservable();
+  getProductModalDisplayStatus(): Observable<boolean> {
+    return this.isDisplayProductModal.asObservable();
   }
-  openModal(): void {
-    this.isDisplay.next(true);
+  getBagModalDisplayStatus(): Observable<boolean> {
+    return this.isDisplayBagModal.asObservable();
   }
-  closeModal(): void {
-    this.isDisplay.next(false);
+  openProductModal(): void {
+    this.isDisplayProductModal.next(true);
+  }
+  closeProductModal(): void {
+    this.isDisplayProductModal.next(false);
+  }
+  openBagModal(): void {
+    this.isDisplayBagModal.next(true);
+  }
+  closeBagModal(): void {
+    this.isDisplayBagModal.next(false);
   }
 }

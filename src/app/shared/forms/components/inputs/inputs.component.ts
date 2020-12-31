@@ -81,7 +81,7 @@ export class InputsComponent implements OnInit, ControlValueAccessor {
       this.writeValue(newV);
     }
   }
-  decrement(event) {
+  decrement(event): void {
     event.stopPropagation();
     const min = 0;
     const step = 1;

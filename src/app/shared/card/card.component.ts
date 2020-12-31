@@ -55,6 +55,6 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
   cart(): void {
-    this.pS.openModal();
+    this.pS.openProductModal();
   }
 }

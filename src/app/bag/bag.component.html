@@ -1,6 +1,6 @@
 <ng-container>
-    <div class="app-bag-overlay">
-        <div class="bag-view">
+    <div class="app-bag-overlay" (click)="closeModal()" [ngStyle]="{'display': isDisplay ? 'flex': 'none'}">
+        <div class="bag-view" (click)="stopModalPropagation($event)">
             <ng-container [ngSwitch]="switchIt">
 
                 <ng-container *ngSwitchCase="'bag'">
@@ -68,10 +68,10 @@
     </div>
 
     <div class="bag-footer">
-        <app-button color="secondary">
+        <app-button color="secondary" (click)="closeModal()">
             Keep shopping
         </app-button>
-        <app-button>
+        <app-button (click)="switchBagView('bagFormA')">
             Checkout
         </app-button>
     </div>
@@ -145,10 +145,10 @@
         </div>
 
         <div class="bag-footer mt-40">
-            <app-button color="secondary">
+            <app-button color="secondary" (click)="switchBagView('bag')">
                 Back
             </app-button>
-            <app-button>
+            <app-button (click)="switchBagView('bagReview')">
                 Review
             </app-button>
         </div>
@@ -224,10 +224,10 @@
     </div>
 
     <div class="bag-footer">
-        <app-button color="secondary">
+        <app-button color="secondary" (click)="switchBagView('bagFormA')">
             Back
         </app-button>
-        <app-button>
+        <app-button (click)="closeModal()">
             Done
         </app-button>
     </div>

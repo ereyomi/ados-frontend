@@ -9,7 +9,7 @@ import { ProductsService } from '../core/services/products.service';
 })
 export class ProductModalComponent implements OnInit, OnDestroy {
   name = 'mock name';
-  isDisplay: boolean = true;
+  isDisplay = true;
   isDisplay$: Subscription;
   componentForm: FormGroup;
   @HostListener('click', ['$event'])
@@ -18,9 +18,9 @@ export class ProductModalComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.initForm();
-    this.isDisplay$ = this.pS.getDisplayStatus().subscribe(status => this.isDisplay = status);
+    this.isDisplay$ = this.pS.getProductModalDisplayStatus().subscribe(status => this.isDisplay = status);
   }
-  initForm() {
+  initForm(): void {
     this.componentForm = this.fb.group({
       quantity: [
         '0',
@@ -32,7 +32,11 @@ export class ProductModalComponent implements OnInit, OnDestroy {
   }
 
   closeModal(): void {
-    this.pS.closeModal();
+    this.pS.closeProductModal();
+  }
+  openBag(): void {
+    this.closeModal();
+    this.pS.openBagModal();
   }
   stopModalPropagation(event: Event): void {
     event.stopPropagation();
