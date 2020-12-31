@@ -7,7 +7,7 @@ import { InputConfig } from '../shared/forms/models/input/input-config';
   templateUrl: './bag.component.html',
 })
 export class BagComponent implements OnInit {
-  switchIt: any = 'bagFormA';
+  switchIt: any = 'bagReview';
   componentForm = this.fb.group({
     quantity: [
       '12',

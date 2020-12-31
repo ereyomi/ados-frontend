@@ -10,6 +10,10 @@
                 <ng-container *ngSwitchCase="'bagFormA'">
                     <ng-container *ngTemplateOutlet="bagFormA"></ng-container>
                 </ng-container>
+
+                <ng-container *ngSwitchCase="'bagReview'">
+                    <ng-container *ngTemplateOutlet="bagReview"></ng-container>
+                </ng-container>
                 
                 <ng-container *ngSwitchDefault>
                     <ng-container *ngTemplateOutlet="bag"></ng-container>
@@ -38,7 +42,7 @@
             <div class="bag-content">
 
                 <div>
-                        <div class="bag-product-img">
+                    <div class="bag-product-img">
                         <img src="assets/images/product6.jpg" alt="">
                     </div>
                     <div>
@@ -131,7 +135,7 @@
             <div class="row">
                 <div class="col-12 mt-20">
                     <div>
-                       <label class="m-0 s12-h16 text-weight-bold">Delivery Address</label> <br>
+                       <label class="m-0 s12-h16 text-weight-bold">Delivery Address</label>
                         <app-inputs type="input" [config]="inputConfig('Full Address')"></app-inputs>
                     </div>
                 </div>
@@ -139,5 +143,93 @@
 
 
         </div>
+
+        <div class="bag-footer mt-40">
+            <app-button color="secondary">
+                Back
+            </app-button>
+            <app-button>
+                Review
+            </app-button>
+        </div>
     </div>
+
+    <div class="bag-footer">
+        <div class="bag-section">
+            <img src="assets/images/svg/shopping-bag-icon.svg" alt="" class="icon-25">
+            <span class="m-0 p-0 s15-h24 ml-6">5</span>
+        </div>
+        <div class="price-section">
+            <p class="m-0 s15-h24"><b>NGN</b> 20,000</p>
+            <p class="m-0 s15-h24"><b>Shipping:</b> NGN 1,000</p>
+        </div>
+    </div>
+</ng-template>
+
+
+<ng-template #bagReview>
+     <div>
+        <div class="bag-header">
+            <div class="bag-section">
+                <p class="m-0 p-0 s22-h32 text-weight-bold">Orders Details</p>
+            </div>
+            <div class="bag-section">
+                <img src="assets/images/svg/shopping-bag-icon.svg" alt="" class="icon-25">
+                <span class="m-0 p-0 s15-h24 ml-6">5</span>
+            </div>
+        </div>
+         <div class="bag-contents">
+             <div>
+
+                 <div class="d-flex flex-row justify-content-start align-items-center mb-14">
+                    <div class="icon-20 overflow-hidden border-radius-50p bg-secondary d-flex flex-row justify-content-center align-items-center">
+                        <p class="m-0 s14-h16 text-weight-bold white-color">E</p>
+                    </div>
+                    <p class="m-0 ml-16 text-weight-bold s14-h16">Ereyomi Oluwaseyi</p>
+                 </div>
+
+                 <div class="d-flex flex-row justify-content-start align-items-center mb-14">
+                    <img src="assets/images/svg/email-icon.svg" alt="" class="icon-18">
+                    <p class="m-0 ml-16 s14-h16">ereyomioluwaseyi@gmail.com</p>
+                 </div>
+
+                 <div class="d-flex flex-row justify-content-start align-items-center mb-30">
+                    <img src="assets/images/svg/phone-icon.svg" alt="" class="icon-18">
+                    <p class="m-0 ml-16 s14-h16">+2347035432921</p>
+                 </div>
+
+                 <div class="col-10 p-0">
+                    <p class="m-0 s12-h16 text-weight-bold mb-10">Delivery Address</p>
+                    <p class="m-0 s14-h16">1000, loram is playing street, surulere, Delta State, Nigeria</p>
+                 </div>
+
+             </div>
+
+             <div class="mt-60">
+                <div class="bag-content">
+                    <p class="m-0 s12-h16 text-weight-bold">I phone6  <span class="m-0 ml-6">x3</span></p>
+                    <p class="m-0 s12-h16 text-weight-bold">NGN  <span class="m-0 ml-6">5,000</span></p>
+                </div>
+                <div class="bag-content">
+                    <p class="m-0 s12-h16 text-weight-bold">I phone7  <span class="m-0 ml-6">x3</span></p>
+                    <p class="m-0 s12-h16 text-weight-bold">NGN  <span class="m-0 ml-6">5,000</span></p>
+                </div>
+                <div class="bag-content">
+                    <p class="m-0 s12-h16 text-weight-bold">Total</p>
+                    <p class="m-0 s12-h16 text-weight-bold">NGN  <span class="m-0 ml-6">10,000</span></p>
+                </div>
+             </div>
+
+         </div>
+    </div>
+
+    <div class="bag-footer">
+        <app-button color="secondary">
+            Back
+        </app-button>
+        <app-button>
+            Done
+        </app-button>
+    </div>
+
 </ng-template>
