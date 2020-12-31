@@ -17,10 +17,13 @@ export class BagComponent implements OnInit {
     ],
   });
   constructor(private fb: FormBuilder) { }
-  inputConfig(): InputConfig {
+  inputConfig(
+    placeholder: string = 'Placeholder',
+    type: string = 'text'
+  ): InputConfig {
     return {
-      type: 'text',
-      placeholder: 'Full Address',
+      type,
+      placeholder,
     };
   }
   ngOnInit(): void {

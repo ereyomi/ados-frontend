@@ -83,10 +83,61 @@
             </div>
         </div>
         <div class="bag-contents">
-            <div>
-                <label class="m-0 s12-h16 text-weight-bold">Delivery Address</label> <br>
-                <app-inputs type="input" [config]="inputConfig()"></app-inputs>
+            <div class="row">
+
+                <div class="col-12">
+                    <label class="m-0 s12-h16 text-weight-bold">Your Name</label>
+                </div>
+
+                <div class="col p-0 d-flex justify-content-start align-items-center">
+                    <div class="col-6">
+                        <div>
+                            <app-inputs type="input" [config]="inputConfig('First Name')"></app-inputs>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <app-inputs type="input" [config]="inputConfig('Last Name')"></app-inputs>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+            <div class="row">
+                <div class="col-12 mt-20">
+                    <div>
+                        <label class="m-0 s12-h16 text-weight-bold">Your Email</label>
+                        <app-inputs type="input" [config]="inputConfig('Email', 'email')"></app-inputs>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-20">
+                
+                <div class="col-12">
+                    <label class="m-0 s12-h16 text-weight-bold">Phone Number</label>
+                </div>
+
+                <div class="col-12 d-flex justify-content-start align-items-center">
+                    <p class="m-0 mr-16">
+                    +234
+                    </p>
+                    <app-inputs type="input" [config]="inputConfig('Number', 'tel')"></app-inputs>
+                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 mt-20">
+                    <div>
+                       <label class="m-0 s12-h16 text-weight-bold">Delivery Address</label> <br>
+                        <app-inputs type="input" [config]="inputConfig('Full Address')"></app-inputs>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </ng-template>

@@ -76,15 +76,10 @@ input[type=number] {
         border: 1px solid $lighter-grey;
         display: block;
         transition: all 0.5s ease-in-out;
+        outline: none;
         @include inputPlaceholder() {
-            color: $medium-grey;
+            color: $lighter-grey;
             opacity: 1;
-        }
-        &.input-error {
-            border: 1px solid $red;
-            @include inputPlaceholder() {
-                color: $red;
-            }
         }
         &:invalid {
             border: 1px solid $red;
@@ -93,11 +88,11 @@ input[type=number] {
             }
         }
         &:hover {
-            border: $black;
+            border: 1px solid $medium-grey-2;
         }
         &:focus {
-            color: $black !important;
-            border: 1px solid $red;
+            color: $medium-grey;
+            border: 1px solid $medium-grey;
         }
         
     }
